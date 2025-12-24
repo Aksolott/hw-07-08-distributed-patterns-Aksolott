@@ -1,0 +1,22 @@
+[project]
+name = "hw07-python"
+version = "0.1.0"
+description = "Resilience patterns implementation in Python"
+requires-python = ">=3.10"
+dependencies = [
+    "grpcio>=1.60.0",
+    "tenacity>=8.2.0",      # Для Retry
+    "circuitbreaker>=2.0.0",# Для Circuit Breaker
+    "prometheus-client>=0.19.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "grpcio-tools>=1.60.0", # Только для генерации кода
+    "mypy>=1.8.0",
+    "ruff>=0.1.0"
+]

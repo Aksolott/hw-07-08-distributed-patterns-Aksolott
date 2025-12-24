@@ -1,0 +1,23 @@
+[package]
+name = "resilience-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tonic = "0.10"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+prost = "0.12"
+tower = { version = "0.4", features = ["timeout", "retry", "limit"] }
+rand = "0.8"  # Для генерации случайных сбоев
+
+[build-dependencies]
+tonic-build = "0.10"
+
+# Явное определение бинарников, чтобы cargo знал, что запускать
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
