@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package resilience;
+
+// Сервис, имитирующий нестабильную работу (Payment Service, Database Service и т.д.)
+service UnstableService {
+  rpc ProcessData (DataRequest) returns (DataResponse);
+}
+
+message DataRequest {
+  string payload = 1;
+}
+
+message DataResponse {
+  bool success = 1;
+  string message = 2;
+}

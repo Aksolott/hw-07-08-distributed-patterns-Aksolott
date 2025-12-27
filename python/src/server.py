@@ -3,8 +3,12 @@ import random
 import os
 import grpc
 from concurrent import futures
-import service_pb2
-import service_pb2_grpc
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from generated import service_pb2
+from generated import service_pb2_grpc
 
 class UnstableService(service_pb2_grpc.UnstableServiceServicer):
     def ProcessData(self, request, context):
