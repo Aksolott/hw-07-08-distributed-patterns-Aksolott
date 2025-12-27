@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: hw07-python
+Version: 0.1.0
+Summary: Resilience patterns implementation in Python
+Requires-Python: >=3.10
+Requires-Dist: grpcio>=1.60.0
+Requires-Dist: tenacity>=8.2.0
+Requires-Dist: circuitbreaker>=2.0.0
+Requires-Dist: prometheus-client>=0.19.0

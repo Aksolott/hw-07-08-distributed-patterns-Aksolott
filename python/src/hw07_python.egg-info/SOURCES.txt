@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/client.py
+src/codegen.py
+src/server.py
+src/generated/service_pb2.py
+src/generated/service_pb2_grpc.py
+src/hw07_python.egg-info/PKG-INFO
+src/hw07_python.egg-info/SOURCES.txt
+src/hw07_python.egg-info/dependency_links.txt
+src/hw07_python.egg-info/requires.txt
+src/hw07_python.egg-info/top_level.txt
